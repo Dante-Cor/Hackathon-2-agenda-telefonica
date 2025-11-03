@@ -23,7 +23,7 @@ public class Main {
         System.out.println("--- 📞 Creación de Agenda Telefonica ---");
         System.out.println("¿Desea especificar un tamaño máximo para la agenda?");
         System.out.println("1. Sí ");
-        System.out.println("2. No (Tamaño por defecto: 15)");
+        System.out.println("2. No (Tamaño por defecto: 10)");
         System.out.print("Seleccione una opción: ");
 
         int opcion;
@@ -31,7 +31,7 @@ public class Main {
             opcion = scanner.nextInt();
             scanner.nextLine();
         } catch (InputMismatchException e) {
-            System.out.println("Entrada inválida. Usando tamaño por defecto (15).");
+            System.out.println("Entrada inválida. Usando tamaño por defecto (10).");
             scanner.nextLine();
             opcion = 2;
         }
@@ -46,14 +46,14 @@ public class Main {
                 agenda = new Agenda(tamano);
                 System.out.println("Agenda creada con capacidad máxima de " + tamano + " contactos.");
             } catch (InputMismatchException e) {
-                System.out.println("Entrada inválida. Usando tamaño por defecto (15).");
+                System.out.println("Entrada inválida. Usando tamaño por defecto (10).");
                 scanner.nextLine();
                 agenda = new Agenda();
             }
         } else {
             // Inicialización de la clase concreta
             agenda = new Agenda();
-            System.out.println("Agenda creada con capacidad por defecto de 15 contactos.");
+            System.out.println("Agenda creada con capacidad por defecto de 10 contactos.");
         }
         System.out.println("-------------------------------------\n");
     }
