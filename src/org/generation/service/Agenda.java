@@ -13,7 +13,7 @@ public class Agenda implements InterfaceAgenda{
     //lista de contactos
     private List<Contacto> contactos;
     private final int sizeMax;
-    private static final int sizeDefault = 15;
+    private static final int sizeDefault = 10;
 
     // Constructor con tamaño máximo especificado
     public Agenda(int sizeMax) {
